@@ -1,0 +1,510 @@
+/* TiffinBox shared styles: tokens, nav, footer, cards, buttons, forms, tables, toast */
+:root {
+  --g: #0f3a2c;
+  --g2: #2a6b4f;
+  --bg: #e6f0e3;
+  --y: #f3b01c;
+  --ink: #10231b;
+  --mut: #5c6f66;
+  --ln: #d6e0d3;
+  --rd: #f29a8b;
+  --vg: #9bddaa;
+  --cr: #fff1c9;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font:
+    15px/1.45 "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+}
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Familjen Grotesk", "Hanken Grotesk", sans-serif;
+  margin: 0;
+}
+a {
+  color: inherit;
+}
+:focus-visible {
+  outline: 3px solid var(--y);
+  outline-offset: 2px;
+}
+nav {
+  background: var(--g);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 24px;
+  height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo i {
+  background: var(--y);
+  color: var(--g);
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  font:
+    700 16px "Familjen Grotesk",
+    system-ui,
+    sans-serif;
+}
+.logo b {
+  color: var(--y);
+}
+.links {
+  margin-left: auto;
+  display: flex;
+  gap: 28px;
+  align-items: stretch;
+  height: 100%;
+}
+.links > a,
+.dd > a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+}
+.links a.on {
+  border-color: var(--y);
+}
+.dd {
+  position: relative;
+}
+.dd div {
+  display: none;
+  position: absolute;
+  top: 64px;
+  left: -10px;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #0003;
+  overflow: hidden;
+  min-width: 150px;
+}
+.dd:hover div,
+.dd:focus-within div {
+  display: block;
+}
+.dd div a {
+  display: block;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+.dd div a:hover {
+  background: var(--cr);
+}
+.av {
+  background: var(--y);
+  color: var(--g);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  text-decoration: none;
+}
+main {
+  min-height: 70vh;
+  padding: 36px 24px 56px;
+}
+.w {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.n {
+  max-width: 760px;
+}
+.sub {
+  color: var(--mut);
+  margin: 6px 0 20px;
+}
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: 0 1px 3px #0f3a2c22;
+  margin-bottom: 20px;
+}
+.card h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+.g2 {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+.g3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.btn {
+  display: inline-block;
+  border: 1.5px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  padding: 11px 20px;
+  border-radius: 9px;
+  font:
+    700 14px "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+.btn.y {
+  background: var(--y);
+  border-color: var(--y);
+}
+.btn.d {
+  background: var(--g);
+  border-color: var(--g);
+  color: #fff;
+}
+.btn:hover {
+  filter: brightness(0.96);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.btn.w100 {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+.chip {
+  display: inline-block;
+  font:
+    700 12px "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+  padding: 3px 12px;
+  border-radius: 99px;
+  background: var(--y);
+}
+.chip.v {
+  background: var(--vg);
+}
+.chip.nv {
+  background: var(--rd);
+}
+.chip.ok {
+  background: #cdebd0;
+  color: var(--g);
+}
+.chip.sk {
+  background: #fbde9b;
+}
+.steps {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin: 8px 0 22px;
+  font-size: 13px;
+  color: var(--mut);
+}
+.steps i {
+  width: 44px;
+  height: 5px;
+  border-radius: 9px;
+  background: #c7d4c4;
+}
+.steps i.f {
+  background: var(--g);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2ec;
+}
+.row b {
+  text-align: right;
+}
+.row:last-child {
+  border: 0;
+}
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1.5px solid var(--ln);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 9px;
+  cursor: pointer;
+}
+.opt:has(input:checked) {
+  border-color: var(--g);
+  background: #f4faf2;
+}
+.opt.dis {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+.opt span {
+  margin-left: auto;
+  color: var(--mut);
+}
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--g);
+  width: 18px;
+  height: 18px;
+}
+label.f {
+  display: block;
+  font-weight: 700;
+  font-size: 13px;
+  margin: 12px 0 4px;
+}
+input.t,
+select,
+textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1.5px solid var(--ln);
+  border-radius: 9px;
+  font: inherit;
+  background: #fff;
+}
+input.t.bad {
+  border-color: #c0392b;
+}
+.err {
+  color: #c0392b;
+  font-size: 12px;
+  min-height: 16px;
+}
+.f2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  font-size: 14px;
+}
+th {
+  background: var(--g);
+  color: #fff;
+  text-align: left;
+  padding: 11px 14px;
+}
+td {
+  padding: 11px 14px;
+  border-bottom: 1px solid #edf1ec;
+  vertical-align: top;
+}
+.tw {
+  overflow-x: auto;
+  border-radius: 12px;
+}
+.tg {
+  display: inline-flex;
+  background: #fff;
+  border-radius: 99px;
+  padding: 4px;
+  margin-bottom: 18px;
+  gap: 2px;
+}
+.tg button {
+  border: 0;
+  background: 0;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font:
+    700 13px "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+  cursor: pointer;
+}
+.tg button.on {
+  background: var(--g);
+  color: #fff;
+}
+.dark {
+  background: var(--g);
+  color: #fff;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+.dark .big {
+  font:
+    700 52px/1 "Familjen Grotesk",
+    system-ui,
+    sans-serif;
+  color: var(--y);
+}
+.bar {
+  height: 8px;
+  background: #ffffff33;
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.bar i {
+  display: block;
+  height: 100%;
+  background: var(--y);
+}
+.warn {
+  background: var(--cr);
+  border: 1.5px solid var(--y);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+footer {
+  background: var(--g);
+  color: #fff;
+  padding: 48px 24px 16px;
+}
+footer .w {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr 1.6fr;
+  gap: 30px;
+}
+footer h4 {
+  font:
+    500 24px "Familjen Grotesk",
+    system-ui,
+    sans-serif;
+  text-transform: uppercase;
+  margin: 0 0 12px;
+}
+footer .lk {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+}
+footer a {
+  text-decoration: none;
+  font-size: 17px;
+}
+footer a:hover {
+  color: var(--y);
+}
+footer p {
+  margin: 4px 0;
+  font-style: italic;
+  font-size: 17px;
+}
+footer small {
+  display: block;
+  text-align: right;
+  opacity: 0.75;
+  margin-top: 14px;
+}
+#toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translate(-50%, 90px);
+  background: var(--ink);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 99px;
+  transition: 0.3s;
+  z-index: 9;
+  opacity: 0;
+}
+#toast.s {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+#toast button {
+  background: 0;
+  border: 0;
+  color: var(--y);
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 12px;
+}
+@media (max-width: 860px) {
+  .g2,
+  .g3,
+  footer .w {
+    grid-template-columns: 1fr;
+  }
+  .links {
+    gap: 14px;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+  .links .dd {
+    display: none;
+  }
+  .f2 {
+    grid-template-columns: 1fr;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* tabs as links / radio labels (no JS) */
+.tg a,
+.tg label {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 99px;
+  font:
+    700 13px "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.tg a.on,
+.tg label:has(input:checked) {
+  background: var(--g);
+  color: #fff;
+}
+.tg input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.tg label:has(input:focus-visible) {
+  outline: 3px solid var(--y);
+}
