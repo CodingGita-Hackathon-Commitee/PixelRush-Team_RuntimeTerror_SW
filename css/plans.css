@@ -1,0 +1,38 @@
+/* Plans page: plan cards */
+.pc {
+  border: 2px solid transparent;
+  position: relative;
+  cursor: pointer;
+}
+.pc.sel {
+  border-color: var(--y);
+}
+.pc h2 {
+  font-size: 24px;
+}
+.pc .pr {
+  font:
+    700 30px "Familjen Grotesk",
+    system-ui,
+    sans-serif;
+}
+.pc .pr small {
+  font:
+    500 14px "Hanken Grotesk",
+    system-ui,
+    sans-serif;
+}
+.pc ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+.pc li:before {
+  content: "✓ ";
+  font-weight: 700;
+}
+.pc .chip {
+  position: absolute;
+  right: 18px;
+  top: 20px;
+}

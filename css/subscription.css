@@ -1,0 +1,78 @@
+/* My subscription: calendar and legend */
+.cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+.cal > div {
+  min-height: 64px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  font-size: 11px;
+  background: #fff;
+  border: 1px solid var(--ln);
+}
+.cal b {
+  font-size: 15px;
+  display: block;
+}
+.cal .hd {
+  border: 0;
+  background: 0;
+  min-height: 0;
+  text-align: center;
+  font-weight: 700;
+  color: var(--mut);
+  padding: 0;
+}
+.cal .x {
+  background: #dde8da;
+  border-color: #dde8da;
+  color: #7a8b80;
+}
+.cal .dl {
+  background: #cdebd0;
+  border-color: #cdebd0;
+}
+.cal .sk {
+  background: #fbde9b;
+  border-color: #fbde9b;
+}
+.cal .td {
+  border: 2px solid var(--g);
+}
+.cal .up {
+  cursor: pointer;
+}
+.cal .up:hover {
+  border-color: var(--g);
+}
+.cal .ps {
+  background: repeating-linear-gradient(
+    45deg,
+    #e7e7e7,
+    #e7e7e7 6px,
+    #f6f6f6 6px,
+    #f6f6f6 12px
+  );
+}
+.cal .sel {
+  box-shadow: 0 0 0 3px var(--y);
+}
+.lg {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin: 6px 0 12px;
+  color: var(--mut);
+}
+.lg i {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 5px;
+  vertical-align: -1px;
+  border: 1px solid var(--ln);
+}
