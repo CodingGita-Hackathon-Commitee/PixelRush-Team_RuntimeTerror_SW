@@ -1,0 +1,10 @@
+/* Pay: show the fields for the chosen payment method with :has() */
+.pp {
+  display: none;
+}
+.card:has(input[value="UPI"]:checked) .pp0,
+.card:has(input[value="Debit or credit card"]:checked) .pp1,
+.card:has(input[value="Net banking"]:checked) .pp2,
+.card:has(input[value="Cash on first delivery"]:checked) .pp3 {
+  display: block;
+}
