@@ -1,5 +1,0 @@
-/* Weekly menu: All / Veg / Non-veg filter with radios only */
-.mf:has(input[value="v"]:checked) .mn,
-.mf:has(input[value="n"]:checked) .mv {
-  display: none;
-}
