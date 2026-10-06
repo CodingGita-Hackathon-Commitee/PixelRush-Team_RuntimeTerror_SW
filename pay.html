@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Subscribe and pay · TiffinBox</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Hanken+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/pay.css" />
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="index.html"
+        ><i>T</i><span>Tiffin<b>Box</b></span></a
+      >
+      <div class="links">
+        <a href="home.html" class="">Home</a
+        ><a href="menu.html" class="">Weekly menu</a>
+        <div class="dd">
+          <a href="plans.html" class="on">Plans ▾</a>
+          <div>
+            <a href="customize.html">Basic</a
+            ><a href="customize.html">Standard</a
+            ><a href="customize.html">Premium</a>
+          </div>
+        </div>
+        <a href="subscription.html" class="">My subscription</a>
+      </div>
+      <a class="av" href="auth.html" title="Account">AK</a>
+    </nav>
+    <main>
+      <div class="w n" style="max-width: 1000px">
+        <h1 style="font-size: 38px">Subscribe and pay</h1>
+        <p class="sub">Check your plan, add your address and pay.</p>
+        <div class="steps">
+          <i class="f"></i><i class="f"></i><i class="f"></i>&nbsp;Step 3 of 3:
+          Subscribe and pay
+        </div>
+        <form action="done.html">
+          <div class="g2">
+            <div>
+              <div class="card">
+                <h3>1. Review your plan</h3>
+                <div class="row"><span>Plan</span><b>Standard</b></div>
+                <div class="row"><span>Food type</span><b>Veg</b></div>
+                <div class="row"><span>Meals</span><b>Lunch and dinner</b></div>
+                <div class="row">
+                  <span>Duration</span><b>30 days, 60 meals</b>
+                </div>
+                <div class="row">
+                  <span>Starts</span><b>Thursday 15 October, 2026</b>
+                </div>
+                <div class="row"><span>Add-ons</span><b>Chaas</b></div>
+                <p>
+                  <a href="customize.html" style="font-weight: 700"
+                    >Change plan</a
+                  >
+                </p>
+              </div>
+              <div class="card">
+                <h3>2. Delivery address</h3>
+                <div>
+                  <label class="f" for="name">Full name</label
+                  ><input
+                    class="t"
+                    id="name"
+                    value="Aman Kumar"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="err" id="e_name"></div>
+                </div>
+                <div class="f2">
+                  <div>
+                    <label class="f" for="phone">Phone number</label
+                    ><input
+                      class="t"
+                      id="phone"
+                      value="98765 12345"
+                      placeholder=""
+                      required=""
+                      pattern="[0-9 ]{10,12}"
+                    />
+                    <div class="err" id="e_phone"></div>
+                  </div>
+                  <div>
+                    <label class="f" for="room">Room number</label
+                    ><input
+                      class="t"
+                      id="room"
+                      value="214"
+                      placeholder=""
+                      required=""
+                    />
+                    <div class="err" id="e_room"></div>
+                  </div>
+                </div>
+                <div>
+                  <label class="f" for="hostel">Hostel or PG name</label
+                  ><input
+                    class="t"
+                    id="hostel"
+                    value="Sunrise Boys Hostel"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="err" id="e_hostel"></div>
+                </div>
+                <div>
+                  <label class="f" for="addr">Address</label
+                  ><input
+                    class="t"
+                    id="addr"
+                    value="Sector 5, near the college gate"
+                    placeholder=""
+                    required=""
+                  />
+                  <div class="err" id="e_addr"></div>
+                </div>
+                <div class="f2">
+                  <div>
+                    <label class="f" for="city">City</label
+                    ><input
+                      class="t"
+                      id="city"
+                      value="Gandhinagar"
+                      placeholder=""
+                      required=""
+                    />
+                    <div class="err" id="e_city"></div>
+                  </div>
+                  <div>
+                    <label class="f" for="pin">PIN code</label
+                    ><input
+                      class="t"
+                      id="pin"
+                      value="382016"
+                      placeholder=""
+                      required=""
+                      pattern="[0-9]{6}"
+                    />
+                    <div class="err" id="e_pin"></div>
+                  </div>
+                </div>
+                <label class="f">Delivery note (optional)</label
+                ><textarea id="note" rows="3">
+Leave the tiffin at the hostel gate.</textarea
+                >
+              </div>
+              <div class="card">
+                <h3>3. Payment method</h3>
+                <label class="opt"
+                  ><input
+                    type="radio"
+                    name="pay"
+                    checked=""
+                    value="UPI"
+                  />UPI<span>Pay with any UPI app</span></label
+                ><label class="opt"
+                  ><input
+                    type="radio"
+                    name="pay"
+                    value="Debit or credit card" />Debit or credit card<span
+                  ></span></label
+                ><label class="opt"
+                  ><input type="radio" name="pay" value="Net banking" />Net
+                  banking<span></span></label
+                ><label class="opt"
+                  ><input
+                    type="radio"
+                    name="pay"
+                    value="Cash on first delivery" />Cash on first delivery<span
+                  ></span
+                ></label>
+                <div id="pf">
+                  <div class="pp pp0">
+                    <label class="f">UPI ID</label
+                    ><input
+                      class="t"
+                      id="upi"
+                      value="aman.kumar@upi"
+                      placeholder="name@bank"
+                    />
+                  </div>
+                  <div class="pp pp1">
+                    <label class="f">Card number</label
+                    ><input
+                      class="t"
+                      id="cn"
+                      inputmode="numeric"
+                      placeholder="1234 5678 9012 3456"
+                    />
+                    <div class="f2">
+                      <div>
+                        <label class="f">Expiry</label
+                        ><input class="t" id="ce" placeholder="MM/YY" />
+                      </div>
+                      <div>
+                        <label class="f">CVV</label
+                        ><input
+                          class="t"
+                          id="cv"
+                          type="password"
+                          maxlength="4"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pp pp2">
+                    <label class="f">Your bank</label
+                    ><select>
+                      <option>SBI</option>
+                      <option>HDFC</option>
+                      <option>ICICI</option>
+                      <option>Axis</option>
+                    </select>
+                  </div>
+                  <div class="pp pp3">
+                    <p class="sub">
+                      Pay the delivery partner when your first tiffin arrives.
+                    </p>
+                  </div>
+                </div>
+                <div class="err" id="e_pay"></div>
+              </div>
+            </div>
+            <div>
+              <div class="card">
+                <h3>Order total</h3>
+                <div class="row">
+                  <span>Meals (60 × ₹85)</span><b>₹5,100</b>
+                </div>
+                <div class="row"><span>Chaas (60 × ₹10)</span><b>₹600</b></div>
+                <div class="row"><span>Discount (8%)</span><b>-₹456</b></div>
+                <div class="row"><span>GST (5%)</span><b>₹262</b></div>
+                <div class="row" style="font-size: 19px">
+                  <b>Total</b><b>₹5,506</b>
+                </div>
+                <p style="font-size: 12px; color: var(--mut)">
+                  Skipped meals are added to the end of your plan.
+                </p>
+                <button class="btn y w100" id="go" type="submit">
+                  Confirm and pay ₹5,506</button
+                ><a class="btn w100" href="customize.html">Back</a>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="w">
+        <div class="logo" style="font-size: 40px">
+          <span>Tiffin<b>Box</b></span>
+        </div>
+        <div>
+          <h4>Quick menu</h4>
+          <div class="lk">
+            <a href="home.html">Home</a
+            ><a href="plans.html">Terms &amp; Conditions</a
+            ><a href="index.html">About Us</a
+            ><a href="plans.html">Privacy Policy</a
+            ><a href="subscription.html">Subscription</a
+            ><a href="menu.html">Faq</a><a href="plans.html">Our Plans</a
+            ><a href="auth.html">Contact Us</a>
+          </div>
+        </div>
+        <div>
+          <h4>Let's get together</h4>
+          <p>
+            Building No. 17/119, First Floor B9, Olangattu Tower, Haritha Nagar
+            Road, Chittethukara, Kakkanad
+          </p>
+          <p>+91 98765 43210 (call / WhatsApp)</p>
+          <p>tiffinboxmess@gmail.com</p>
+        </div>
+      </div>
+      <small>© 2026 Tiffinbox Tern LLP. All rights reserved</small>
+    </footer>
+  </body>
+</html>
