@@ -1,0 +1,21 @@
+/* Success page */
+.tick {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--g2);
+  color: #fff;
+  font-size: 38px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  animation: pop 0.5s;
+}
+@keyframes pop {
+  from {
+    transform: scale(0.3);
+  }
+  to {
+    transform: scale(1);
+  }
+}
