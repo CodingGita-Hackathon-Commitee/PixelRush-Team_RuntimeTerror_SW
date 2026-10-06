@@ -1,0 +1,35 @@
+/* Sign in / create account */
+.auth {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 560px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+.auth > div:first-child {
+  background: var(--g);
+  color: #fff;
+  padding: 48px;
+}
+.auth > div + div {
+  background: #fff;
+  padding: 40px;
+}
+.auth h1 {
+  font-size: 44px;
+  line-height: 1.05;
+}
+.auth li {
+  margin: 12px 0;
+  list-style: none;
+}
+.auth li:before {
+  content: "●";
+  color: var(--y);
+  margin-right: 10px;
+}
+@media (max-width: 860px) {
+  .auth {
+    grid-template-columns: 1fr;
+  }
+}
